@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 MAINTAINER 1020505
 
 RUN apt-get update
-RUN apt-get apt-get install wget bzip2 unzip tar 
+RUN apt-get install wget bzip2 unzip tar 
 RUN cd opt
 RUN wget https://sourceforge.net/projects/math-atlas/files
 /Stable/3.10.3/atlas3.10.3.tar.bz2
