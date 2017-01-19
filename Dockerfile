@@ -3,6 +3,9 @@ MAINTAINER 1020505
 
 RUN apt-get update
 RUN apt-get install wget bzip2 unzip tar 
+RUN y
+RUN apt-get install build-essential python-dev
+RUN y
 RUN cd opt
 RUN wget https://sourceforge.net/projects/math-atlas/files
 /Stable/3.10.3/atlas3.10.3.tar.bz2
@@ -21,6 +24,7 @@ RUN cd /opt
 RUN wget http://www.netlib.org/lapack/lapack-3.4.1.tgz
 RUN cd ATLAS3.10.3/Linux_C2D64SSE3
 RUN apt-get install gfortran cmake
+RUN y
 RUN ../configure -b 64 -D c -DPentiumCPS=3900 --prefix=/us
 r/lib/atlas     --with-netlib-lapack-tarfile=/opt/lapack-3.4.1.tgz
 RUN make build
